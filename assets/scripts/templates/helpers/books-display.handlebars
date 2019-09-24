@@ -1,0 +1,22 @@
+
+{{#each books as |book|}}
+  <div class="wrapper">
+    <section data-id="{{book.id}}">
+      <div class="container">
+        <div class="row">
+          <p class="handlebar-field">Name:&nbsp;</p>
+          <p>
+            {{limit book.name 15}}
+          </p>
+        </div>
+        <div class="row">
+          <p class="handlebar-field">Author:&nbsp;</p>
+          <p>
+            {{limit book.author 15}}
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <hr>
+{{/each}}
