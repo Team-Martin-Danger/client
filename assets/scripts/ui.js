@@ -3,7 +3,6 @@
 const api = require('./api.js')
 
 const onGetBooks = function () {
-  console.log('sanity check')
   api.getBooks()
     .then(onClickSuccess)
     .catch(onError)
@@ -12,6 +11,7 @@ const onGetBooks = function () {
 const onClickSuccess = responseData => {
   console.log(responseData)
   $('#books-display').html('')
+
   responseData.books.forEach(book => {
     // build HTML element with data
     const bookHTML = (`
