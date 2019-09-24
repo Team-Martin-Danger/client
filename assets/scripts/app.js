@@ -6,6 +6,8 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+const ui = require('./ui')
+
 $(() => {
-  // your JS code goes here
+  $('.submit').on('click', ui.onGetBooks)
 })
