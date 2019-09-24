@@ -10,7 +10,8 @@ const onGetBooks = function () {
 
 const onClickSuccess = responseData => {
   console.log(responseData)
-  $('#book-display').html('')
+  $('#books-display').html('')
+
   responseData.books.forEach(book => {
     // build HTML element with data
     const bookHTML = (`
@@ -21,7 +22,7 @@ const onClickSuccess = responseData => {
       `)
 
     // append bookHTML to our book-display element
-    $('#book-display').append(bookHTML)
+    $('#books-display').append(bookHTML)
   })
 }
 
