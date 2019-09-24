@@ -3,7 +3,7 @@
 const store = require('./store')
 const config = require('./config')
 
-const getBooks = function (data) {
+const getBooks = function () {
   return $.ajax({
     url: config.apiUrl + '/books',
     method: 'GET'
